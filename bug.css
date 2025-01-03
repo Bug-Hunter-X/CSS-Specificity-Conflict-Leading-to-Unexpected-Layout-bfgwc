@@ -1,0 +1,14 @@
+The following CSS code snippet demonstrates a common issue where specificity conflicts arise, leading to unexpected styling behavior.  The `#sidebar` ID selector is more specific than the `.container` class selector, so the `#sidebar` styles will override the `.container` styles, even if they are declared later in the stylesheet. This often causes unexpected layout issues.
+
+```css
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#sidebar {
+  width: 200px;
+  float: left;
+  background-color: lightgray;
+}
+```
