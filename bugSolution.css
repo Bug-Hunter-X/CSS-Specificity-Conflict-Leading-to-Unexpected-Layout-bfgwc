@@ -1,0 +1,30 @@
+There are several ways to solve this specificity conflict. One approach is to make the `.container` selector more specific by adding an extra class to the sidebar's container or modifying the `#sidebar` selector. Here's an improved version:
+
+```css
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container #sidebar {
+  width: 200px;
+  float: left;
+  background-color: lightgray;
+}
+```
+
+Alternatively, you can use the `!important` flag, but this is generally discouraged due to its potential for making CSS harder to maintain.
+
+```css
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#sidebar {
+  width: 200px !important; /* Use cautiously */
+  float: left;
+  background-color: lightgray;
+}
+```
+Choose the solution that best fits your project's structure and maintainability considerations.
